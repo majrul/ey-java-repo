@@ -1,0 +1,214 @@
+Java
+- Programming language
+- Platform independent
+- Object Oriented
+- Versions
+  - Java 8 and 11 (Commonly used)
+  - Java 9 and 10 are not commonly talked about
+    - there are some versions in between introduced with no LTS
+  - The next LTS version of Java was Java 17
+
+- How a particular feature is added in Java?
+  - We have something called as JCP
+    - The community will create a JSR
+  - Another process for introducing features in Java is called as JEP
+
+- Setup
+  - We need to have JDK installed on our system
+    - Tools and utilities i need for developing and running java apps
+    - We don't get an IDE along with JDK
+      - Separately we need to install Eclipse/IntelliJ/Vs Code
+
+
+- Environment
+  - Java is compiled and interpreted language
+  - A Java program is saved as a .java file
+    - When compiled, bytecode is produced
+      - Which is saved as a .class file
+
+  - The compiler is part of JDK
+
+  - To run our Java code, we need something called as JVM
+    - JVM is part of JRE
+    - JVM's as of now are finetuned keeping server side systems in mind
+
+  - JRE is part of JDK
+
+  - We looked as various tools which are shipped along with JDK, for ex:
+    - jdb, jconsole, jshell, etc...
+    - TODO: Explore more about these tools
+
+- Java has a huge API/library with lot's of readymade functions
+  - for ex: String is a library class
+            System is a library class 
+  - Libraries are organized in packages
+  - java.lang is one of the package in java
+  - java.util, java.time, java.sql, ...
+
+
+Basics of Java
+- Primitive datatypes
+  for ex: i want to store a number
+    int x = 10; //Java
+    x: number = 10; //typescript
+    var x = 10; //JavaScript
+    //in the latest version of java, we can use JS style declaration:
+    var x = 10;
+
+  - there are few datatypes in java which require explicit type conversion:
+    - float f = 99.99;//error
+    - float f = 99.99F;
+ 
+    - long l = 99999999999999; //error
+    - long l = 99999999999999L;
+
+
+    int x = 9_9999_99; //underscore symbol for logical separation
+
+    //what if we want to store a number which is so huge that none of the datatypes will fit?
+    - we'll have to use BigInteger and BigDecimal API to help us in such cases
+      - TODO : check the usage of these API classes
+
+ - String in Java is not a primitive type, why?
+   - for primitive datatypes, memory and size is fixed
+   - where in case of String, which is non primitive type (object) memory is allocated dynamically
+     String str = "Majrul Ansari";
+
+
+- Flow Control (if/else if/switch case)
+
+- Loops and Iterations (for, while, do..while)  
+
+
+- Object Oriented Programming
+
+  - What is an Object?
+    - An object is a representation/description of a thing (physical/logical) or an entity
+    - Before we answer this question, let's assume that we call everything around us is an object
+      - laptop, headphone, mobilephone, tv, ...
+
+    - How do you describe an Object?
+      - An object has 
+        - state/data/attributes/properties/characteristics/features/...
+        - behaviour/functionality
+
+
+- TODO: Check more about OOAD
+
+- In programming, an object is described using a class
+  - a class is a template/prototype/skeleton for creating object
+
+
+OO concepts
+- Abstraction
+  - a software representation/model of any real world entity
+    ex:
+    class Color {
+      int r, g, b;
+    }
+
+    Color c = new Color(127, 127, 127); //gray colour
+  
+   -as soon as you create a class, you have achieved abstraction
+   
+   for ex, create a calculator in java for adding and subtraction number
+   - class Calculator {
+       
+       void add(..) {
+
+       }
+
+       void sub(..) {
+
+       }
+     }
+ 
+   another ex, we have do develop an employee management system (ems):
+   - class Employee {
+        int empno;
+        String name;
+        double salary;
+     }
+
+   there are 4 ways of achieving abstraction in java
+   - class, interface, enum, annotations (@)
+
+     enum DaysOfTheWeek {
+        MON, TUE, WED, THU, FRI, SAT, SUN;
+     }
+
+     DaysOfTheWeek d = DaysOfTheWeek.SUN;
+
+- Encapsulation
+  - unit
+  - as soon as you a create a class in java, you have achieved abstraction and encapsulation as well
+   
+- Inheritance
+  - a way of creating relationship between classes
+  - IS-A relationship between classes
+
+    class Person {
+       address;
+    }
+
+    class Employee extends Person {
+      empno,name,salary;
+    }
+
+    class Manager extends Employee {
+      commission;
+    }
+
+
+- There is one more way of creating relationship between classes
+  - HAS-A relationship between classes
+    - Association
+      - one to one, one to many, many to one, many to many
+    - TODO: Check what is Aggregation and Composition
+            Whole/Part Relationship
+
+     class Employee {
+        String name;
+        double salary;
+        Project[] projects;
+     }
+
+     class Project {
+
+
+     }
+
+    class Vehicle {
+
+    }
+
+    class Car extends Vehicle { //is a
+       Engine engine; //has a
+    }
+
+    class Engine {
+
+    }
+ 
+- Polymorphism
+  - compile time/overloading/early binding
+  - run time/overriding/late binding
+
+
+Google maps is an abstract representation of the geographical regions
+
+As a developer, you will first create an abstract version of the software
+- then gradually with time you will fill the system with all the required features
+
+
+for ex: i want to develop a banking app which the customers will use to:
+open/close account, fund transfer, deposit, withdraw, ...
+
+
+Packages in Java
+- A package is way of grouping/organizing related java programs together
+- It's just a folder which get's created
+- Name of the package generally followings this pattern (com.companyname)
+
+
+

@@ -1,4 +1,4 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy;
 
 public class Book extends Product {
 
@@ -15,6 +15,11 @@ public class Book extends Product {
 
 	public void setIsbn(int isbn) {
 		this.isbn = isbn;
+	}
+	
+	@Override
+	public double calculateDiscount() {
+		return getPrice() * 0.10;
 	}
 
 	@Override

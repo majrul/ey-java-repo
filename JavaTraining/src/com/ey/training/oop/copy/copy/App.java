@@ -1,10 +1,10 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy.copy;
 
 public class App {
 
 	public static void main(String[] args) {
 		ProductInventory inv = new ProductInventory();
-		
+				
 		Book b1 = new Book("Java Complete Reference", 450, 99, 1234567890);
 		Book b2 = new Book("Java Unleashed", 550, 99, 987654321);
 	

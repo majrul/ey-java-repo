@@ -1,6 +1,6 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy.copy;
 
-public class Product /*extends Object*/ {
+public abstract class Product /*extends Object*/ {
 
 	//class variable(s)
 	private static int generator = 1000;
@@ -66,6 +66,9 @@ public class Product /*extends Object*/ {
 	public int getId() {
 		return id;
 	}
+	
+	public abstract double calculateDiscount();
+		
 
 	public void info() {
 		System.out.println("----------------");

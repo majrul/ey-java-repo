@@ -1,4 +1,4 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy;
 
 public class App {
 

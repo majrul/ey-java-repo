@@ -211,4 +211,13 @@ Packages in Java
 - Name of the package generally followings this pattern (com.companyname)
 
 
-
+abstract keyword of java
+- abstract keyword is used for methods whose signature will be present in the parent class
+  and body of the method will be in the subclasses
+- for a class to contain abstract methods, even the class has to be marked as abstract class
+  - abstract classes cannot be instantiated directly
+  
+- static keyword
+  - static keyword when used with variables declare in a class:
+    - what happens is that there will be only one copy of that variable in the memory
+  

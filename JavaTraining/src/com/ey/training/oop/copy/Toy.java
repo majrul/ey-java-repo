@@ -1,4 +1,4 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy;
 
 public class Toy extends Product {
 
@@ -17,6 +17,16 @@ public class Toy extends Product {
 		this.ageGroup = ageGroup;
 	}
 
+	@Override
+	public double calculateDiscount() {
+		double discount = 0;
+		if(getAgeGroup() == AgeGroup.TWO_FOUR)
+			discount = getPrice() * 0.15;
+		else if(getAgeGroup() == AgeGroup.FOUR_FIVE)
+			discount = getPrice() * 0.05;
+		return discount;
+	}
+	
 	@Override
 	public void info() {
 		super.info();

@@ -1,4 +1,4 @@
-package com.ey.training.oop;
+package com.ey.training.oop.copy;
 
 public class Product /*extends Object*/ {
 
@@ -65,6 +65,10 @@ public class Product /*extends Object*/ {
 
 	public int getId() {
 		return id;
+	}
+	
+	public double calculateDiscount() {
+		return 0;
 	}
 
 	public void info() {

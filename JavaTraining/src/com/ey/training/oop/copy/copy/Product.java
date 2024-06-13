@@ -6,7 +6,7 @@ public abstract class Product /*extends Object*/ {
 	private static int generator = 1000;
 	
 	//instance variable(s)
-	private int id;
+	private final int id;
 	private String name;
 	//private String type;
 	private String description;
@@ -27,7 +27,7 @@ public abstract class Product /*extends Object*/ {
 		this.price = price;
 		this.stockInHand = stockInHand;
 	}
-	
+
 	//we use getters and setters for read/write operations
 	//in eclipse, we can generate getters and setters
 	//menu bar->source->generate getters and setters

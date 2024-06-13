@@ -220,4 +220,95 @@ abstract keyword of java
 - static keyword
   - static keyword when used with variables declare in a class:
     - what happens is that there will be only one copy of that variable in the memory
+  - what happens in case of static methods?
+    - there is no difference in memory management of static and non static functions/methods
+    - the only difference is in how you call it
+ 
+ - final keyword
+   - final can be used for variables, methods and class as well
+     - final variables act like constant whose value cannot be modified once assigned
+     - final methods cannot be overriden
+       - opposite of abstract methods, which has to be overriden
+       - wait() and notify() are final methods in java
+     - final class cannot be inherited, you cannot extend a final class
+       - String class is final class
+
+ - we can combine static and final for declaring constant variables, for ex:
+ 
+class Math {
+  
+  static final double PI = 3.14;
+}       
+
+class Product {
+
+   static final String SITE_NAME = "Flipkart";
+}
+     
+final class User {
+   String username, password;
+   
+   void encrypt() {
+   	//we are using some alg to encrypt the username and password
+   }
+   
+   void decrypt() {
+   	//we are using some alg to decrypt the username and password   
+   }
+}
+
+class FakeUser extends User {
+
+  void encrypt() {
+   	
+   }
+   
+   void decrypt() {
+   	
+   }
+}   
+
+User u = new User(); // i will replace this silently with:
+User u = new FakeUser();
+u.encrypt();
+    
+Thumb rule of Java
+------------------
+1.
+  In some places, we need to create objects to access the required functionality:
+  for ex:
+     Scanner s = new Scanner(..);
+     s.nextLine();
+     
+     Date d = new Date();
+
+2.
+  In some places, we don't need to create objects to access the required functionality:
+  for ex:
+    Math.sqrt(..);
+    Integer.parseInt(..);
+
+3.
+  In some places, we need to create objects with someone's help to access the required functionality:
+  for ex:
+	LocalDate d = LocalDate.now();
+	LocalDate d = LocalDate.of(2020, 6, 13);
+	d.getDayOfWeek();
+	
+	String str = "Majrul";
+	//we don't write: String str = new String("Majrul");
+
+
+class Class {
+
+
+}
+
+class Object {
+
+}
+
+  
+  
+  
   

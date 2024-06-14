@@ -13,5 +13,6 @@ public class App {
 		launcher.launch(app2);
 		
 		taskManager.closeAllApps();
+		
 	}
 }

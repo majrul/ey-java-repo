@@ -308,7 +308,42 @@ class Object {
 
 }
 
+
+Interfaces in Java
+-------------------
+Scenario:
+Google has introduced an OS called as Android for mobiles devices
+- Google wants to create an API/library which any developer can use for developing Android apps
+- Google will create a contract/specification which developers can use in their code
   
-  
-  
+  interface MobileApp {
+    
+    //this method will be called when the user launches the app
+    void start();
+
+    //this method will be called when the user switches to a different app
+    void pause();
+
+    //this method will be called when the user closes the app
+    void stop();
+
+  }
+
+Dev 1 (I want to develop a game)
+
+class CarRacingGame extends OpenGL implements MobileApp {
+
+}
+
+Dev 2 (I want to develop a banking app)
+
+class BankingApp implements MobileApp {
+
+
+}
+
+TODO:
+Check what are the differences between class and interface
+
+
   

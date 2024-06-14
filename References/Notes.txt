@@ -346,4 +346,40 @@ TODO:
 Check what are the differences between class and interface
 
 
+Lambda expressions
+------------------
+- anonymous functions
+- it allows us to pass functions as arguments
+- till java 7, we can only pass primitive datatypes or objects as arguments to methods
+  - this concepts part of functional programming technique
+  - there is one more programming paradigm called as reactive programming
+  - the merger of the above is called as functional reactive programming (FRP)
+  - Java supports FRP techniques
+   
+like in OOP, object is the central concept
+in FP, function is the first class citizen
+
+- JavaScript
+  function() {
+  
+  }
+  
+  () => {
+  
+  }
+  
+  setInterval(hello, 1000);
+  function hello() {
+  
+  }
+  
+  setInterval(function() {
+  
+  }, 1000);
+  
+  setInterval(() => {
+  
+  }, 1000);
+  
+  
   

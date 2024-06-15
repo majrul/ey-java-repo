@@ -405,8 +405,38 @@ Exception Handling
 Exception
 - Error which may occur during the execution of a program
 
+- As a developer we should aim to write code in which exceptions will be rare
+  - On the contrary, Java in many places forces developer to write try..catch block in the code
+    even if no error is going to occur
+
 Exception Handling
 - Writing code which will execute when some error occurs
+
+java.lang.Exception class is the parent of all exceptions in Java
+
+Object
+- Throwable
+  - There are two subclasses derived from Throwable class (Exception & Error)
+    - We should not use Error and it's subclasses
+      - It's meant for reporting low level errors
+    - Exception and it's subclasses
+      - It's meant for reporting application level errors
+  - Exception
+    - There are 2 types of exceptions, checked and unchecked
+      checked
+      - compiler checks whether the exception has been handled or not
+      - Exception class and it's subclasses are checked in nature
+        ex: IOException, FileNotFoundException, SQLException, etc...
+      unchecked
+      - compiler ignores whether the exception has been handled or not
+      - from Exception class, a special subclass by the name RuntimeException is derived
+        - RuntimeException and it's subclasses are unchecked in nature
+        - ex: NullPointerException, ArrayIndexOutOfBoundsException, ...
+        
+TODO:
+- Exception chaining
+- How to programatically investigage the stack trace
+
 
 
   

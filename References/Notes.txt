@@ -351,7 +351,7 @@ Lambda expressions
 - anonymous functions
 - it allows us to pass functions as arguments
 - till java 7, we can only pass primitive datatypes or objects as arguments to methods
-  - this concepts part of functional programming technique
+  - this concept is part of functional programming technique
   - there is one more programming paradigm called as reactive programming
   - the merger of the above is called as functional reactive programming (FRP)
   - Java supports FRP techniques
@@ -382,4 +382,31 @@ in FP, function is the first class citizen
   }, 1000);
   
   
+In Java, pre-req for lambda:
+- anonymous inner classes
+  class {
+  
+  }
+  
+- inner classes
+  class A {
+  	
+  	class B {
+  	
+  	}
+  }
+  
+- inner classes are used for writing classes which are not reusable
+- anonymous inner classes needs a parent class/interface to inherit from
+
+
+Exception Handling
+------------------
+Exception
+- Error which may occur during the execution of a program
+
+Exception Handling
+- Writing code which will execute when some error occurs
+
+
   

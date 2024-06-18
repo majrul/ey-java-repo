@@ -435,8 +435,57 @@ Object
         
 TODO:
 - Exception chaining
-- How to programatically investigage the stack trace
+- How to programatically investigate the stack trace
 
 
+Collections
+-----------
+- One of the most commonly used collection in an array
+  - array is a set of more than one element of same type
+    - int[] arr = new int[5];
+      arr[0] = 100;
+      arr[1] = 200;
+      ...
+
+  - in Javascript,
+      var arr = new Array();
+      var arr[] = [];
+      arr[0] = 100; OR arr.push(100);
+      
+      int[] arr = {10, 20, 30, 40, 50};
+      
+      there are some issues with arrays in java because of which we don't use them regularly
+      - arrays cannot be resized
+        - arrays are fixed length in nature
+        - arrays cannot be expanded/shrinked dynamically at the runtime
+
+- Java provides alternatives to array in the form of Collection API (Data Structures)
+- List, Set and Map are the 3 commonly used collection types
+- Collections are dynamic(growable/shrinkable) in nature, there is no size limit like arrays
+- Like in real life we use different types of collections, same is the case with programming
+
+- List
+  - allows duplicate elements
+  - each element has an index associated with it (just like arrays)
+    - that means i can read elements of the list randomly
+  - the order of the elements does not change
+    - i.e the order in which we add the elements, when we read it back it will be the same
+  - ArrayList, LinkedList are few implementations of List in Java
+    
+- Set
+  - doesn't allows duplicate elements
+  - there is no index associated with the elements of it
+    - to reach a particular element, we need to traverse/iterate the whole set
+  - the order of the elements may change
+    - i.e the order in which we add the elements, when we read it back it will not be the same
+  - HashSet, LinkedHashSet are few implementations of Set in Java
+
+- Map
+  - Also called as Dictionary in other languages
+  - Used for storing data in pairs (key & value)
+    - ex: empno is the key, employee details is the value   
+  - key has to be unique, value can be duplicate
+  - HashMap, LinkedHashMap are few implementations of Map in Java
+  
 
   

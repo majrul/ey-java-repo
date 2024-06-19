@@ -43,24 +43,23 @@ public class Person /*extends Object*/ {
 	
 	@Override
 	public int hashCode() {
-		System.out.println("hashCode called..");
+		//System.out.println("hashCode called..");
 		return Objects.hash(dateOfBirth, email, name);
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("equals called..");
+		//System.out.println("equals called..");
 		if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Person other = (Person) obj;
-		return Objects.equals(dateOfBirth, other.dateOfBirth) && Objects.equals(email, other.email)
-				&& Objects.equals(name, other.name);
+		Person p = (Person) obj;
+		if(this.name.equals(p.name) && this.email.equals(p.email) && this.dateOfBirth.equals(p.dateOfBirth))
+			return true;
+		return false;
 	}
-	
-	
-	
+
 }

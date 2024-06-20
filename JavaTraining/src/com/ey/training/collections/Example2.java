@@ -1,15 +1,17 @@
 package com.ey.training.collections;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Example2 {
 
 	public static void main(String[] args) {
-		Set<String> set1 = new HashSet<String>();
+		Set<String> set1 = new HashSet<String>(); //LinkedHashSet
+		//SortedSet<String> set1 = new TreeSet<String>();
 		set1.add("Java");
 		set1.add("Python");
 		set1.add("C/C++");

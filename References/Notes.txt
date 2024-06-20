@@ -486,6 +486,10 @@ Collections
     - ex: empno is the key, employee details is the value   
   - key has to be unique, value can be duplicate
   - HashMap, LinkedHashMap are few implementations of Map in Java
-  
 
+  
+Stream API
+----------
+- API which is used for data processing
+- It's like an Iterator but with more features
   

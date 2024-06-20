@@ -29,9 +29,13 @@ public class Example4 {
 			}
 		};
 		
-		//Collections.sort(list, comp);
-		Collections.sort(list, (p1, p2) -> p1.getName().compareTo(p2.getName()));
-		list.forEach(System.out::println);
+		Collections.sort(list, comp);
+		//Collections.sort(list, (p1, p2) -> p1.getName().compareTo(p2.getName()));
+		//Collections.sort(list, Comparator.comparing(Person::getName));
+		list.sort(comp);
+		
+		list.forEach(p -> System.out.println(p));
+		//list.forEach(System.out::println);
 	
 		
 		List<String> list2 = new ArrayList<String>();

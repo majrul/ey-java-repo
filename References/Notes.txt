@@ -493,3 +493,30 @@ Stream API
 - API which is used for data processing
 - It's like an Iterator but with more features
   
+Various functional interfaces used by Stream API
+- Function
+  - function which takes an input, and has a return type
+- Consumer
+  - function which takes an input, but no return type
+- Supplier
+  - function with no input, but has a return type
+- Predicate
+  - function with some input, and boolean as return value
+- TODO:
+  - Check some more functional interfaces from java.util.function package
+  
+
+
+Multithreading
+---------------
+- WE may not get a change to develop a multithreaded app from scratch
+  - Since most java applications are going to run on servers which are already providing multithreaded environment
+- But every developer needs to focus on one thing, and that is:
+  - Concurrency issues
+
+- The requirement is to execute more than one task (Multi Tasking) at the same time
+  - To achieve this, there are 2 options:
+    - Multi Processing
+    - Multi Threading (sub processes / process inside a process)
+    
+  

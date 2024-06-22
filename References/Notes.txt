@@ -519,4 +519,17 @@ Multithreading
     - Multi Processing
     - Multi Threading (sub processes / process inside a process)
     
-  
+ 
+ - There are 2 types of Threads we can create in Java
+   - Daemon and Non-Daemon
+   - By default Threads are non-daemon in nature
+     - JVM will not terminate as long as non-daemon threads are running
+     
+- Scenario: Suppose you have issued print command to print a word document of 100 pages
+            So far 10 pages have got printed, 90 left
+            Then we issue shutdown command
+  - What will happen?
+    - Will windows wait for the printer to print the remaining 90 pages and then only shutdown?
+      - IF windows waits for the printer to finish the printing, then that means the printing process is non daemon
+      - IF windows doesn't waits for the printer to finish the printing, then that means the printing process is daemon
+      

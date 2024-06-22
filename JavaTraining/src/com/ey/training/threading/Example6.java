@@ -1,6 +1,7 @@
 package com.ey.training.threading;
 
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
 
 public class Example6 {
 
@@ -9,7 +10,7 @@ public class Example6 {
 		
 		Runnable r1 = () -> {
 			System.out.println("hello start");
-			try { barrier.await(); } catch(Exception e) { }
+			try { barrier.await(1, TimeUnit.SECONDS); } catch(Exception e) { }
 			System.out.println("hello end");
 		};
 

@@ -541,3 +541,9 @@ Multithreading
     - semaphore, latch, barrier, ...
     
     
+In Java we have wrapper classes for datatypes,
+- for ex: for int datatype, we have Integer wrapper class
+
+- TODO: check what is the role of AtomicInteger then?
+        How can we schedule the execution of any task? for ex: i want the task to execute at 11.59 pm in the night
+    

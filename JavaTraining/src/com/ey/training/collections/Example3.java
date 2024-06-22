@@ -17,6 +17,7 @@ public class Example3 {
 		//map.put(1231231234L, new Person("Aravindh", "aravindh@gmail.com", LocalDate.of(1995, 10, 20)));
 		
 		//generally we should check like this
+		//this code has a concurrency issue
 		if(!map.containsKey(1231231234L))
 			map.put(1231231234L, new Person("Aravindh", "aravindh@gmail.com", LocalDate.of(1995, 10, 20)));			
 		

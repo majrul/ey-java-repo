@@ -11,7 +11,7 @@ public class Person /*extends Object*/ {
 	
 	public Person() {
 	}
-	Person(String name, String email, LocalDate dateOfBirth) {
+	public Person(String name, String email, LocalDate dateOfBirth) {
 		this.name = name;
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;

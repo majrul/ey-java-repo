@@ -1,0 +1,12 @@
+Download and Extract Derby Database
+
+From the bin folder, launch startNetworkserver.bat to start the DB Engine
+
+Then from the bin folder, launch ij.bat to interact with the DB
+
+Type the following command in ij:
+
+connect 'jdbc:derby://localhost:1527/training;create=true;user=root;password=root';
+
+This will create a database which we can connect to easily from our java code as well
+

@@ -532,4 +532,12 @@ Multithreading
     - Will windows wait for the printer to print the remaining 90 pages and then only shutdown?
       - IF windows waits for the printer to finish the printing, then that means the printing process is non daemon
       - IF windows doesn't waits for the printer to finish the printing, then that means the printing process is daemon
-      
+   
+- synchronization
+  - synchronization issue will arise when more than one thread is trying to perform some operation on same instance
+    - synchronized keyword will help us by allowing only one thread at a time to execute the respective operation
+      - this is also called as locking (mutex)
+  - there are other types of locking as well
+    - semaphore, latch, barrier, ...
+    
+    

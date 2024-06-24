@@ -35,6 +35,8 @@ public class InsertData3 {
 			
 			st.executeUpdate();
 			
+			//TODO: Fetch the generated id of the record inserted and display it
+			
 			System.out.println("Record inserted..");
 		}
 		catch (ClassNotFoundException | SQLException e) {

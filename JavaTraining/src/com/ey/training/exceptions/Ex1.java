@@ -32,8 +32,8 @@ public class Ex1 {
 		}
 		
 		String str = null;
-		if(str != null)
-			str.toLowerCase();
+		//if(str != null)
+		str.toLowerCase();
 		
 		
 		int[] arr = new int[5];

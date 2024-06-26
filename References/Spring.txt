@@ -1,0 +1,40 @@
+Spring Framework
+- Creating objects of our classes
+  - There are different ways of achieving this in Spring:
+    Option 1
+    --------
+    We need to write an xml file in which we will do the entry of the class 
+    whose object has to be created
+    - for ex, if we have class:
+      class HelloWorld {
+        ..
+      }
+      Then in the xml file, we need to write this:
+      <bean id="hello" class="com.ey.component.HelloWorld" />
+    
+    Option 2
+    --------
+    We will use annotations provided by Spring in our class:
+    @Component("hello")
+    class HelloWorld {
+        ..
+    }
+    To make this code work, we need to do the following entry in the xml file:
+    <context:component-scan base-package="com.ey.component" />
+    
+    Option 3
+    --------
+    In recent projects, we are not using xml approach for configuration
+    xml based configuration has been replaced with java based configuration
+    @Configuration
+	@ComponentScan("com.ey.component") //equivalent to <context:component-scan .. />
+	public class MySpringConfig {
+
+		//@Bean -- this is equivalent to <bean tag of xml />
+	}
+	
+	
+- And managing the dependencies between objects
+
+This core feature of Spring is called as DI
+

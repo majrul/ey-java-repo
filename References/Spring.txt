@@ -33,8 +33,8 @@ Spring Framework
 		//@Bean -- this is equivalent to <bean tag of xml />
 	}
 	
-	
 - And managing the dependencies between objects
-
+  
+  
 This core feature of Spring is called as DI
 

@@ -8,6 +8,8 @@ import com.ey.component.CurrencyConverter;
 import com.ey.component.Greeting;
 import com.ey.component.HelloWorld;
 import com.ey.component.LoginService;
+import com.ey.component.TextEditor;
+import com.ey.component.bank.copy.Atm;
 
 public class App {
 
@@ -30,6 +32,12 @@ public class App {
 		
 		LoginService loginServ = (LoginService) ctx.getBean("loginService");
 		System.out.println(loginServ.isValidUser("majrul", "123"));
+		
+		TextEditor te = (TextEditor) ctx.getBean("txtEdtr");
+		te.load("abc.txt");
+		
+		Atm atm = (Atm) ctx.getBean("sbiatm2");
+		atm.withdraw(98765, 5000);
 		
 		//Why are we not creating object of HelloWorld class:
 		//HelloWorld h = new HelloWorld(); ??????

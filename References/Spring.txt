@@ -34,7 +34,12 @@ Spring Framework
 	}
 	
 - And managing the dependencies between objects
-  
+  - We use @Autowired annotation to inject dependendies in our code:
+    TODO: What are the different ways of inject object in a class
   
 This core feature of Spring is called as DI
+
+Apart from DI, there are many project specific requirements for which we use Spring
+- To start with we will now introduce Spring's Database integration support
+
 

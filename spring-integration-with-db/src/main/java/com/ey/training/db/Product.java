@@ -1,9 +1,23 @@
 package com.ey.training.db;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_product")
 public class Product {
 
+	@Id
+	@GeneratedValue
+	@Column(name = "prod_id")
 	private int id;
+	
+	@Column(name = "prod_name")
 	private String name;
+	
 	private double price;
 	private int quantity;
 	

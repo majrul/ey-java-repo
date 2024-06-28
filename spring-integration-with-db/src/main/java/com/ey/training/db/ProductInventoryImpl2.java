@@ -9,18 +9,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("prodInv1")
-public class ProductInventoryImpl1 implements ProductInventory {
+@Component("prodInv2")
+public class ProductInventoryImpl2 implements ProductInventory {
 
+	@Autowired
+	private DataSource dataSource;
+	
 	@Override
 	public void add(Product product) {
 		Connection conn = null;
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/training", "root", "root");
-
+			conn = dataSource.getConnection();
 			String sql = "insert into product(name,price,quantity) values(?, ?, ?)";
 			PreparedStatement st = conn.prepareStatement(sql);
 
@@ -30,7 +34,7 @@ public class ProductInventoryImpl1 implements ProductInventory {
 			
 			st.executeUpdate();
 		}
-		catch (ClassNotFoundException | SQLException e) {
+		catch (SQLException e) {
 			e.printStackTrace();
 		}
 		finally {
@@ -42,13 +46,8 @@ public class ProductInventoryImpl1 implements ProductInventory {
 	public List<Product> getAvailableProducts() {
 		Connection conn = null;
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			
-			long ms1 = System.currentTimeMillis();
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/training", "root", "root");
-			long ms2 = System.currentTimeMillis();
-			System.out.println("approx time taken to connect to db " + (ms2 - ms1) + " ms");
-			
+			conn = dataSource.getConnection();
+
 			String sql = "select * from product";
 			PreparedStatement st = conn.prepareStatement(sql); 
 			ResultSet rs = st.executeQuery();
@@ -64,7 +63,7 @@ public class ProductInventoryImpl1 implements ProductInventory {
 			}
 			return list;
 		}
-		catch (ClassNotFoundException | SQLException e) {
+		catch (SQLException e) {
 			e.printStackTrace();
 			return null; //bad, rather we should have thrown exception
 		}

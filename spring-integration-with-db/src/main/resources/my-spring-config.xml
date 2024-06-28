@@ -9,4 +9,24 @@
 
 	<context:component-scan base-package="com.ey.training.db" />
 
+	<!-- DataSource configuration
+		 This one doesn't do any real connection pooling, it will open connection on demand only 
+		 This implementation is good for testing purpose -->
+	<!-- <bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" init-method="createDataSource">	
+	    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+	    <property name="url" value="jdbc:mysql://localhost:3306/training" />
+	    <property name="username" value="root" />
+	    <property name="password" value="root" />
+	    <property name="initialSize" value="3" />
+	</bean>
+	
+	<!-- To setup a connection pool properly, we need to use third party implementations like:
+		1. Apache DBCP
+		2. C3P0
+		3. Hikari
+		...
+	 -->
+	 
+	 
 </beans>

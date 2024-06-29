@@ -23,7 +23,7 @@ public class ProductInventoryImpl4 implements ProductInventory {
 	@Override
 	public List<Product> getAvailableProducts() {
 		return entityManager
-				.createQuery("select p from Product p") //HQL/JPQL
+				.createQuery("select p.name, p.price from Product p") //HQL/JPQL
 				.getResultList();
 	}
 

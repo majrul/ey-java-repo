@@ -15,7 +15,7 @@ public class App2 {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("my-spring-config.xml");
 		ProductRepository prodRepo = ctx.getBean(ProductRepository.class);
-		
+		//System.out.println(prodRepo.getClass());
 		/*Product product = new Product();
 		product.setName("Samsung S24");
 		product.setPrice(59000);
@@ -23,13 +23,15 @@ public class App2 {
 		prodRepo.save(product);*/
 		
 		//List<Product> list = prodRepo.findAll();
-		List<Product> list = prodRepo.findByPriceGreaterThan(50000);
+		//List<Product> list = prodRepo.findByPriceGreaterThan(50000);
+		//List<Product> list = prodRepo.findAllByName("iPhone");
+		List<Product> list = prodRepo.findByPrice(49000);
 		for(Product product : list)
 			System.out.println(product);
 		
-		System.out.println("----------");
+		/*System.out.println("----------");
 		prodRepo
-			.findByName("iPhone 11")
-			.ifPresent(p -> System.out.println(p));
+			.findByName("Samsung S24")
+			.ifPresent(p -> System.out.println(p));*/
 	}
 }

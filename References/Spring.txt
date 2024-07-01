@@ -43,3 +43,12 @@ Apart from DI, there are many project specific requirements for which we use Spr
 - To start with we will now introduce Spring's Database integration support
 
 
+Java Bean
+- Any class in Java can be referred to as bean in modern terms
+- Traditionally for a Java code to be given the title of JavaBean, it has to follow these rules:
+  - It should have a default constructor
+  - It should have getters/setters
+  - It should implements Serializable interface
+  
+- There's one alternative term used instead of Javabean commonly:
+	- POJO  

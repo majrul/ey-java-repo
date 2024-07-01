@@ -15,13 +15,16 @@ public class App {
 
 	public static void main(String[] args) {
 		//Loading the Configuration of Spring
+		//Loading the IoC container of Spring
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("my-spring-config.xml");
 		
 		//Access a bean
-		HelloWorld h = (HelloWorld) ctx.getBean("hello"); //bean id
-		System.out.println(h.sayHello("Majrul"));
+		for(int i=0; i<5; i++) {
+			HelloWorld h = (HelloWorld) ctx.getBean("hello"); //bean id
+			System.out.println(h.sayHello("Majrul"));
+		}
 		
-		Greeting g = (Greeting) ctx.getBean("greet");
+		/*Greeting g = (Greeting) ctx.getBean("greet");
 		System.out.println(g.greet());
 		
 		CurrencyConverter cc = (CurrencyConverter) ctx.getBean("currConv");
@@ -37,7 +40,7 @@ public class App {
 		te.load("abc.txt");
 		
 		Atm atm = (Atm) ctx.getBean("sbiatm2");
-		atm.withdraw(98765, 5000);
+		atm.withdraw(98765, 5000);*/
 		
 		//Why are we not creating object of HelloWorld class:
 		//HelloWorld h = new HelloWorld(); ??????
